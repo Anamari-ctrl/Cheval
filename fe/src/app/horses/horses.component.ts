@@ -12,6 +12,6 @@ import { Router } from 'express';
 })
 export class HorsesComponent {
   horses = [
-    { id: 1, name: 'Thunder', age: 5, breed: 'Arabian', owner: 'John Doe', photoUrl: '../../assets/horse.jpg' },
+    { id: 1, name: 'Thunder', age: 5, breed: 'Arabian', owner: 'John Doe', photoUrl: '/assets/horse.jpg' },
   ];
 }

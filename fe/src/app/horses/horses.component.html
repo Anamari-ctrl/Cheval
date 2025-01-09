@@ -2,7 +2,7 @@
     <div class="horse-card" *ngFor="let horse of horses">
       <!-- Horse Photo -->
       <div class="horse-photo">
-        <img src="horse.photoUrl" alt="{{ horse.photoUrl }}" />
+        <img [src]="horse.photoUrl" alt="{{ horse.photoUrl }}" />
       </div>
       
       <!-- Horse Details -->
