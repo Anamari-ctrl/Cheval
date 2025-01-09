@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Router } from 'express';
+import { provideHttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-horses',
@@ -12,6 +13,16 @@ import { Router } from 'express';
 })
 export class HorsesComponent {
   horses = [
-    { id: 1, name: 'Thunder', age: 5, breed: 'Arabian', owner: 'John Doe', photoUrl: '/assets/horse.jpg' },
+    { id: 1, name: 'Quality', age: 5, breed: 'Arabian', owner: 'Anamari Orehar', photoUrl: '/assets/horse.jpg' },
+    { id: 1, name: 'Quality', age: 5, breed: 'Arabian', owner: 'Anamari Orehar', photoUrl: '/assets/horse.jpg' },
+    { id: 1, name: 'Quality', age: 5, breed: 'Arabian', owner: 'Anamari Orehar', photoUrl: '/assets/horse.jpg' },
+    { id: 1, name: 'Quality', age: 5, breed: 'Arabian', owner: 'Anamari Orehar', photoUrl: '/assets/horse.jpg' },
+    { id: 1, name: 'Quality', age: 5, breed: 'Arabian', owner: 'Anamari Orehar', photoUrl: '/assets/horse.jpg' },
+    { id: 1, name: 'Quality', age: 5, breed: 'Arabian', owner: 'Anamari Orehar', photoUrl: '/assets/horse.jpg' },
+    { id: 1, name: 'Quality', age: 5, breed: 'Arabian', owner: 'Anamari Orehar', photoUrl: '/assets/horse.jpg' },
+    { id: 1, name: 'Quality', age: 5, breed: 'Arabian', owner: 'Anamari Orehar', photoUrl: '/assets/horse.jpg' },
+    { id: 1, name: 'Quality', age: 5, breed: 'Arabian', owner: 'Anamari Orehar', photoUrl: '/assets/horse.jpg' },
+    { id: 1, name: 'Quality', age: 5, breed: 'Arabian', owner: 'Anamari Orehar', photoUrl: '/assets/horse.jpg' },
+
   ];
 }
