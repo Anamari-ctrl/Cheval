@@ -10,7 +10,7 @@ class FeedingSchedulesTableSeeder extends Seeder
     public function run()
     {
         FeedingSchedule::create([
-            'horse_id' => 1, // Ensure horse with ID 1 exists
+            'horse_id' => 1, 
             'feed_type' => 'Hay',
             'quantity' => 5,
             'feeding_time' => 'morning',
