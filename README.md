@@ -16,8 +16,6 @@ The term **cheval** originates from the French language where it means horse.
 - **Frontend**:
   - Node.js & npm
   - Angular CLI
-- **General**:
-  - Git
 
 ### **Backend Setup (Laravel)**
    - git clone <https://github.com/Anamari-ctrl/Cheval>
