@@ -20,24 +20,18 @@ The term **cheval** originates from the French language where it means horse.
   - Git
 
 ### **Backend Setup (Laravel)**
-   git clone <https://github.com/Anamari-ctrl/Cheval>
-   cd horse-management-system
-   cd backend
-   composer install
-   cp .env.example .env
-     DB_CONNECTION=mysql
-     DB_HOST=127.0.0.1
-     DB_PORT=3306
-     DB_DATABASE=horse_management
-     DB_USERNAME=your_username
-     DB_PASSWORD=your_password
-   php artisan migrate
-   php artisan serve
+   - git clone <https://github.com/Anamari-ctrl/Cheval>
+   - cd horse-management-system
+   - cd backend
+   - composer install
+   - cp .env.example .env
+   - php artisan migrate
+   - php artisan serve
 
 ### **Frontend Setup (Angular)**
-   cd ../frontend
-   npm install 
-   ng serve
+   - cd ../frontend
+   - npm install 
+   - ng serve
 
 
 
