@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "b5355c68-0f07-4a1a-a8ab-b8378df1e601",
+		"name": "Horse Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37784295",
+		"_collection_link": "https://sbr-development.postman.co/workspace/SBR-development-Workspace~9956f148-54ab-4811-8be3-7fdc2b575eef/collection/37784295-b5355c68-0f07-4a1a-a8ab-b8378df1e601?action=share&source=collection_link&creator=37784295"
+	},
+	"item": [
+		{
+			"name": "Feeding Schedules APIs",
+			"item": [
+				{
+					"name": "/api/horses/{horse}/feeding-schedules",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/horses/1/feeding-schedules"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/horses/{horse}/feeding-schedules",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/horses/1/feeding-schedules"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/feeding-schedules/{feeding_schedule}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/feeding-schedules/1 "
+					},
+					"response": []
+				},
+				{
+					"name": "/api/feeding-schedules/{feeding_schedule}\t",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/feeding-schedules/1"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/feeding-schedules/{feeding_schedule}\t",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/feeding-schedules/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Horse APIs",
+			"item": [
+				{
+					"name": "/api/horses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/horses"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/horses/{horse}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/horses/1"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/horses/{horse}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/horses/1"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/horses/{horse}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/horses/2"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/horses",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/horses"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Instruction APIs",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/api/horses/{horse}/instructions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/horses/1/instructions"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/horses/{horse}/instructions\t",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/horses/1/instructions"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/instructions/{instruction}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/instructions/1"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/instructions/{instruction}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/instructions/1"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/instructions/{instruction}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/instructions/1"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
