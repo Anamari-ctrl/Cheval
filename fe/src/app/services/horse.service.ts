@@ -1,27 +1,33 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Horse } from '../models/horse'; 
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HorseService {
-  private apiUrl = 'http://localhost:3000/api/horses';
+  private apiUrl = `${environment.apiUrl}/horses`;
 
   constructor(private http: HttpClient) {}
 
-  getHorseById(id: number): Observable<Horse> {
-    console.log(this.http);
-    console.log(this.apiUrl);
-    console.log(id);
-    
-    // return this.http.get<Horse>(`${this.apiUrl}/${id}`);
-    return new Observable<Horse>();
+  getAllHorses(): Observable<any> {
+    return this.http.get(this.apiUrl);
   }
 
-  updateHorse(id: number, horse: Horse): Observable<Horse> {
-    return new Observable<Horse>();
-    // return this.htt<p.put<Horse>(`${this.apiUrl}/${id}`, horse);
+  getHorseById(id: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/${id}`);
+  }
+
+  createHorse(horse: any): Observable<any> {
+    return this.http.post(this.apiUrl, horse);
+  }
+
+  updateHorse(id: number, horse: any): Observable<any> {
+    return this.http.put(`${this.apiUrl}/${id}`, horse);
+  }
+
+  deleteHorse(id: number): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/${id}`);
   }
 }

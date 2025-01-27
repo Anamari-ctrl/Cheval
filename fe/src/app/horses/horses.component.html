@@ -1,23 +1,11 @@
-<div class="horse-cards-container">
-    <div class="horse-card" *ngFor="let horse of horses">
-      <!-- Horse Photo -->
-      <div class="horse-photo">
-        <img [src]="horse.photoUrl" alt="{{ horse.photoUrl }}" />
-      </div>
-      
-      <!-- Horse Details -->
-      <div class="horse-details">
-        <h2>{{ horse.name }}</h2>
-        <p><strong>Age:</strong> {{ horse.age }}</p>
-        <p><strong>Breed:</strong> {{ horse.breed }}</p>
-        <p><strong>Owner:</strong> {{ horse.owner }}</p>
-      </div>
-      
-      <!-- Action Buttons -->
-      <div class="horse-actions">
-        <button [routerLink]="['/edit-horse', horse.id]">Edit</button>
-        <button [routerLink]="['/feeding-schedule', horse.id]">View Feeding Schedule</button>
-      </div>
-    </div>
+<div class="horse-list">
+  <div *ngFor="let horse of horses" class="horse-card">
+    <h3>{{ horse.name }}</h3>
+    <p>Age: {{ horse.age }}</p>
+    <p>Breed: {{ horse.breed }}</p>
+    <p>Owner: {{ horse.owner }}</p>
+    <button [routerLink]="['/edit-horse', horse.id]">Edit</button>
+    <button [routerLink]="['/feeding-schedule', horse.id]">View Feeding Schedules</button>
+    <button (click)="deleteHorse(horse.id)">Delete</button>
   </div>
-  
+</div>

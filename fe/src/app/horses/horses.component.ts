@@ -1,28 +1,28 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { Router } from 'express';
-import { provideHttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { HorseService } from '../services/horse.service';
 
 @Component({
   selector: 'app-horses',
-  standalone: true,
-  imports: [RouterModule, CommonModule],
   templateUrl: './horses.component.html',
-  styleUrl: './horses.component.css'
+  styleUrls: ['./horses.component.css']
 })
-export class HorsesComponent {
-  horses = [
-    { id: 1, name: 'Quality', age: 5, breed: 'Arabian', owner: 'Anamari Orehar', photoUrl: '/assets/horse.jpg' },
-    { id: 1, name: 'Quality', age: 5, breed: 'Arabian', owner: 'Anamari Orehar', photoUrl: '/assets/horse.jpg' },
-    { id: 1, name: 'Quality', age: 5, breed: 'Arabian', owner: 'Anamari Orehar', photoUrl: '/assets/horse.jpg' },
-    { id: 1, name: 'Quality', age: 5, breed: 'Arabian', owner: 'Anamari Orehar', photoUrl: '/assets/horse.jpg' },
-    { id: 1, name: 'Quality', age: 5, breed: 'Arabian', owner: 'Anamari Orehar', photoUrl: '/assets/horse.jpg' },
-    { id: 1, name: 'Quality', age: 5, breed: 'Arabian', owner: 'Anamari Orehar', photoUrl: '/assets/horse.jpg' },
-    { id: 1, name: 'Quality', age: 5, breed: 'Arabian', owner: 'Anamari Orehar', photoUrl: '/assets/horse.jpg' },
-    { id: 1, name: 'Quality', age: 5, breed: 'Arabian', owner: 'Anamari Orehar', photoUrl: '/assets/horse.jpg' },
-    { id: 1, name: 'Quality', age: 5, breed: 'Arabian', owner: 'Anamari Orehar', photoUrl: '/assets/horse.jpg' },
-    { id: 1, name: 'Quality', age: 5, breed: 'Arabian', owner: 'Anamari Orehar', photoUrl: '/assets/horse.jpg' },
+export class HorsesComponent implements OnInit {
+  horses: any[] = [];
 
-  ];
+  constructor(private horseService: HorseService) {}
+
+  ngOnInit(): void {
+    this.horseService.getAllHorses().subscribe((data) => {
+      this.horses = data;
+    });
+  }
+  deleteHorse(horseId: number): void {
+    const confirmDelete = confirm('Are you sure you want to delete this horse?');
+    if (confirmDelete) {
+      this.horseService.deleteHorse(horseId).subscribe(() => {
+        this.horses = this.horses.filter((horse) => horse.id !== horseId);
+        alert('Horse deleted successfully!');
+      });
+    }
+  }
 }

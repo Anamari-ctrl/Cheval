@@ -1,1 +1,19 @@
-<p>add-horse works!</p>
+<form [formGroup]="horseForm" (ngSubmit)="onSubmit()">
+    <label for="name">Name:</label>
+    <input id="name" formControlName="name" />
+  
+    <label for="age">Age:</label>
+    <input id="age" type="number" formControlName="age" />
+  
+    <label for="breed">Breed:</label>
+    <input id="breed" formControlName="breed" />
+  
+    <label for="owner">Owner:</label>
+    <input id="owner" formControlName="owner" />
+  
+    <label for="photo_url">Photo URL:</label>
+    <input id="photo_url" formControlName="photo_url" />
+  
+    <button type="submit">Add Horse</button>
+  </form>
+  

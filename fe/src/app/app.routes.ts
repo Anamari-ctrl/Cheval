@@ -8,6 +8,7 @@ import { EditHorseComponent } from './edit-horse/edit-horse.component';
 import { FeedingScheduleComponent } from './feeding-schedule/feeding-schedule.component';
 import { ScheduleListComponent } from './schedule-list/schedule-list.component';
 import { AddHorseComponent } from './add-horse/add-horse.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 export const routes: Routes = [
@@ -22,7 +23,10 @@ export const routes: Routes = [
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)], 
+  imports: [
+    RouterModule.forRoot(routes),
+    ReactiveFormsModule
+  ], 
   exports: [RouterModule] 
 })
 export class AppRoutingModule {}
