@@ -14,7 +14,7 @@ class HorsesTableSeeder extends Seeder
             'age' => 5,
             'breed' => 'Arabian',
             'owner' => 'John Doe',
-            'photo_url' => 'https://example.com/thunder.jpg',
+            'photo_url' => '/assets/horse.jpg',
         ]);
 
         Horse::create([
@@ -22,7 +22,7 @@ class HorsesTableSeeder extends Seeder
             'age' => 3,
             'breed' => 'Thoroughbred',
             'owner' => 'Jane Smith',
-            'photo_url' => 'https://example.com/lightning.jpg',
+            'photo_url' => '/assets/horse.jpg',
         ]);
     }
 }
