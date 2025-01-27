@@ -1,7 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { HorseService } from '../services/horse.service';
+import { RouterModule } from '@angular/router';
+import { Router } from 'express';
+import { provideHttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+
+
+
 
 @Component({
+  imports: [RouterModule, CommonModule],
   selector: 'app-horses',
   templateUrl: './horses.component.html',
   styleUrls: ['./horses.component.css']

@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { HorseService } from '../services/horse.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
+  imports: [FormsModule, ReactiveFormsModule],
   selector: 'app-add-horse',
   templateUrl: './add-horse.component.html',
   styleUrls: ['./add-horse.component.css']
