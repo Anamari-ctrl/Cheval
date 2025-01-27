@@ -16,6 +16,8 @@ import { CommonModule } from '@angular/common';
 })
 export class HorsesComponent implements OnInit {
   horses: any[] = [];
+  defaultPhotoUrl = '/assets/horse.jpg';
+
 
   constructor(private horseService: HorseService) {}
 

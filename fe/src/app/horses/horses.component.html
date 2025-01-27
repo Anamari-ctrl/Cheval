@@ -1,6 +1,7 @@
 <div class="horse-list">
   <div *ngFor="let horse of horses" class="horse-card">
     <h3>{{ horse.name }}</h3>
+    <img [src]="horse.photo_url" alt="Photo of {{ horse.name }}" />  
     <p>Age: {{ horse.age }}</p>
     <p>Breed: {{ horse.breed }}</p>
     <p>Owner: {{ horse.owner }}</p>
