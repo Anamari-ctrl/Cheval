@@ -1,1 +1,27 @@
-<p>feeding-schedule works!</p>
+<div class="feeding-schedule-container">
+    <h2>Feeding Schedule for Horse {{ horseId }}</h2>
+    <div *ngIf="feedingSchedules.length > 0; else noData">
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Feed Type</th>
+            <th>Quantity</th>
+            <th>Instructions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let schedule of feedingSchedules">
+            <td>{{ schedule.time }}</td>
+            <td>{{ schedule.feedType }}</td>
+            <td>{{ schedule.quantity }} kg</td>
+            <td>{{ schedule.instructions }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <ng-template #noData>
+      <p class="no-data">No feeding schedule available for this horse.</p>
+    </ng-template>
+  </div>
+  
