@@ -5,7 +5,6 @@
     <p>Age: {{ horse.age }}</p>
     <p>Breed: {{ horse.breed }}</p>
     <p>Owner: {{ horse.owner }}</p>
-    <button class="btn" [routerLink]="['/edit-horse', horse.id]">Edit</button>
     <button class="btn view-schedule-btn" [routerLink]="['/feeding-schedule', horse.id]">View Feeding Schedules</button>
     <button class="btn delete-btn" (click)="deleteHorse(horse.id)">Delete</button>
   </div>

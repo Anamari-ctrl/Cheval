@@ -1,48 +1,76 @@
-/* Main container for feeding schedule */
 .feeding-schedule-container {
-    max-width: 800px;
+    max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   h2 {
     text-align: center;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   
-  /* Table styles */
-  table {
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input {
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
   }
   
-  thead {
+  button {
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"] {
     background-color: #007bff;
     color: white;
   }
   
-  th,
-  td {
-    padding: 12px 15px;
-    text-align: center;
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+  
+  th, td {
     border: 1px solid #ddd;
-  }
-  
-  tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  /* No data message styling */
-  .no-data {
+    padding: 8px;
     text-align: center;
-    color: #555;
-    font-size: 1rem;
-    padding: 20px 0;
+  }
+  
+  th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  button {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  button:hover {
+    background-color: #c82333;
   }
   

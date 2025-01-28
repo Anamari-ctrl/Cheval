@@ -15,9 +15,4 @@ class Horse extends Model
     {
         return $this->hasMany(FeedingSchedule::class);
     }
-
-    public function instructions()
-    {
-        return $this->hasMany(Instruction::class);
-    }
 }

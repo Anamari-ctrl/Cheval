@@ -9,7 +9,7 @@ class FeedingSchedule extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['horse_id', 'feed_type', 'quantity', 'feeding_time'];
+    protected $fillable = ['time', 'quantity', 'feed_type', 'medication_name', 'dosage', 'horse_id'];
 
     public function horse()
     {
